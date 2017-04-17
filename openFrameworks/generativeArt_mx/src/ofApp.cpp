@@ -345,9 +345,12 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-	if(!iniciaTodo)
-		ofDrawBitmapString("OPRIME s PARA INICIAR", ofGetWidth()/2, ofGetHeight()/2);
+	if (!iniciaTodo) {
+		ofDrawBitmapString("OPRIME s PARA INICIAR", ofGetWidth() / 2, ofGetHeight() / 2);
+		ofDrawBitmapString("Oprime mouse para cambiar escenas", ofGetWidth() / 2, 50+ofGetHeight() / 2);
 
+	}
+		
 	if (!estado && iniciaTodo) {
 		if (escena == 0) {
 			ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2);
