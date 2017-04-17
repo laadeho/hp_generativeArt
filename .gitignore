@@ -36,6 +36,6 @@
 *.suo
 .vs/*
 
-*/obj/*
-*/bin/*
+obj/
+bin/
 Debug/
