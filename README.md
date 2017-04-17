@@ -3,3 +3,6 @@ hackpact 2012 Arte Generativo
 
 Código originalmente desarrollado en Processing.
 Programado ahora a C++ con la librería OpenFrameworks.
+
+
+[![hackpact](https://github.com/laadeho/hp_generativeArt/blob/master/hp2012.png?raw=true)](http://hackpact.laad.com.mx/2012/genart/eduardoh/eduardo.html)
