@@ -29,6 +29,9 @@ class ofApp : public ofBaseApp{
 		int escena = 0;
 		int iniciaTodo = false;
 
+		bool guardaFrame = false;
+		ofImage captura;
+
 		// COMO SE DEFINEN ARRAYS
 		// HP01
 		int n = 50;

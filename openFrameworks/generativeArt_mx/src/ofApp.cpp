@@ -135,6 +135,13 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	if (guardaFrame) {
+		captura.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
+		captura.save("frames/" + ofToString(ofGetFrameNum()) + ".tif");
+		//ofSaveScreen("frames/"+ ofToString(ofGetFrameNum()) + ".tif");
+		//ofSaveImage("frames/" + ofToString(ofGetFrameNum()) + ".tif");
+	}
+
 	if (escena == 0) {
 		for (int i = 0; i<n; i++) {
 			ofRotate(-rota[i]);
@@ -971,7 +978,10 @@ void ofApp::evaluar() {
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-	if (key == 's')
+	if (key == 's' || key == 'S')
+		guardaFrame = !guardaFrame;
+
+	if (key == 'i' || key == 'I')
 		iniciaTodo = true;
 	if (escena == 12) {
 		if (key == OF_KEY_RIGHT) {
