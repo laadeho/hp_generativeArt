@@ -12,7 +12,7 @@ int qlh = int(random(3, 10));
 int qlc = int(random(2, 5));
 
 void setup() {
-  size(1600, 800);
+  size(1920, 1080);
   background(0);
 
   cur = new Curva();
@@ -25,6 +25,12 @@ void draw() {
   ver.draw();
   hor.draw();
   cur.draw();
+
+  if (mousePressed) {
+    saveFrame("GA_01.png");
+    delay(500);
+    exit();
+  }
 }
 
 class Curva {

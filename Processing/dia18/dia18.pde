@@ -6,7 +6,7 @@
 //arte generativo dia 18
 float di=450;
 void setup() {
-  size(1600, 800, P3D);
+  size(1920, 1080, P3D);
   background(0);
 }
 
@@ -39,5 +39,10 @@ void draw() {
   }
   if (col>=90) {
     col=0;
+  }
+  if (mousePressed) {
+    saveFrame("GA_18.png");
+    delay(500);
+    exit();
   }
 }

@@ -8,7 +8,7 @@ float col=0;
 int sw=1;
 
 void setup() {
-  size(800, 400);
+  size(1920, 1080);
   background(255);
   smooth();
 }
@@ -20,7 +20,7 @@ void draw() {
   stroke(50);
   strokeWeight(0.1);
 
-  float alt1=noise(dista)*450;
+  float alt1=noise(dista)*height;
 
   translate(posi, 0);
   float pox = alt1;
@@ -40,4 +40,9 @@ void draw() {
   }
   posi+=5;
   dista+=alt1;
+  if (mousePressed) {
+    saveFrame("GA_05.png");
+    delay(500);
+    exit();
+  }
 }

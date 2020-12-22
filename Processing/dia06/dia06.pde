@@ -15,7 +15,7 @@ float incz[];
 int q = 10;
 
 void setup() {
-  size(800, 400, P3D);
+  size(1920, 1080, P3D);
   background(0);
   smooth();
   noStroke();
@@ -86,5 +86,10 @@ void draw() {
     if ((pz[p] > height*0.75) || (pz[p] < 0)) {
       incz[p]= incz[p] * -1;
     }
+  }
+  if (mousePressed) {
+    saveFrame("GA_06.png");
+    delay(500);
+    exit();
   }
 }

@@ -17,7 +17,7 @@ float cb=255;
 
 void setup() {
   //size(800, 400, OPENGL);
-  size(800, 400);
+  size(1920, 1080);
   smooth();
   background(0);
   c= new Centro();
@@ -63,6 +63,11 @@ void draw() {
   }
   if (cuenta == 8) {
     cuenta=0;
+  }
+  if (mousePressed) {
+    saveFrame("GA_12.png");
+    delay(500);
+    exit();
   }
 }
 

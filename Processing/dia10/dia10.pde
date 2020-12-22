@@ -6,7 +6,7 @@
 int ca = 5;
 float[] vari, rx, ry, rz, distx, multix, multiy, multiz;
 void setup() {
-  size(800, 400, P3D);
+  size(1920, 1080, P3D);
   background(255);
   smooth();
   distx= new float[ca];
@@ -32,8 +32,7 @@ void draw() {
 
   translate(width/2, height/2);
   for (int i=0; i<ca; i++) {
-
-    vari[i]=150+noise(distx[i])*30;
+    vari[i]=250+noise(distx[i])*30;
     rotateX(rx[i]+millis()*multix[i]);
     rotateY(ry[i]+millis()*multiy[i]);
     rotateZ(rz[i]+millis()*multiz[i]);
@@ -41,9 +40,14 @@ void draw() {
     strokeWeight(1);
     point(vari[i], 0);
 
-    strokeWeight(0.1);
+    strokeWeight(0.25);
     stroke(121, 87, 9, 20);
     line(vari[i], 0, 100, 0);
     distx[i]+=0.1;
   }
+  //if (mousePressed) {
+  //  saveFrame("GA_01.png");
+  //  delay(500);
+  //  exit();
+  //}
 }

@@ -7,7 +7,7 @@ float movx=0;
 float movy=2;
 
 void setup() {
-  size(1600, 800);
+  size(1920, 1080);
   background(255);
   frameRate(10);
   smooth();
@@ -42,5 +42,10 @@ void draw() {
   popMatrix();
   if ((movx > width) || (movx < 0)) {
     vel = vel * -1;
+  }
+  if (mousePressed) {
+    saveFrame("GA_03.png");
+    delay(500);
+    exit();
   }
 }

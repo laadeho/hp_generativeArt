@@ -3,11 +3,11 @@
  http://artegenerativo.laad.com.mx 
  */
 
-int pun=800, s, si, inicia=0;
+int pun=1920, s, si, inicia=1;
 float dista[], px[], py[], pz[], ang[], vel[];
 
 void setup() {
-  size(800, 400, P3D);
+  size(1920, 1080, P3D);
   background(0);
   px=new float[pun];
   py=new float[pun];
@@ -38,5 +38,11 @@ void draw() {
       py[i]=sin(ang[i])*200;
       pz[i]=cos(ang[i])*200;
     }
+  }
+
+  if (mousePressed) {
+    saveFrame("GA_24.png");
+    delay(500);
+    exit();
   }
 }

@@ -9,7 +9,7 @@ Pm pm;
 float posx, posy, pas=40, mur=6, ang=0, dirx=0, diry=0;
 int caso;
 void setup() {
-  size(1600, 800);
+  size(1920, 1080);
   background(0);
   smooth();
   posx=random(width); 
@@ -68,6 +68,12 @@ void draw() {
     break;
   }
   popMatrix();
+
+  if (mousePressed) {
+    saveFrame("GA_13.png");
+    delay(500);
+    exit();
+  }
 }
 
 void keyPressed() {

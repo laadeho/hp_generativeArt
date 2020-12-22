@@ -13,7 +13,7 @@ float rad=PI/180, rx=5, ry=5;
 
 void setup() {
   // size(800*2, 400*2, OPENGL);
-  size(800, 400, P3D);
+  size(1920, 1080, P3D);
   cam = new PeasyCam(this, 150);
   cam.setMinimumDistance(350);
   cam.setMaximumDistance(500);
@@ -29,6 +29,11 @@ void draw() {
   pushMatrix();
   c.dibuja();
   popMatrix();
+  if (mousePressed) {
+    saveFrame("GA_11.png");
+    delay(500);
+    exit();
+  }
 }
 
 class Brazo {

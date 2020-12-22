@@ -135,13 +135,6 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-	if (guardaFrame) {
-		captura.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
-		captura.save("frames/" + ofToString(ofGetFrameNum()) + ".tif");
-		//ofSaveScreen("frames/"+ ofToString(ofGetFrameNum()) + ".tif");
-		//ofSaveImage("frames/" + ofToString(ofGetFrameNum()) + ".tif");
-	}
-
 	if (escena == 0) {
 		for (int i = 0; i<n; i++) {
 			ofRotate(-rota[i]);
@@ -348,12 +341,18 @@ void ofApp::update(){
 	}
 
 	escena = escena % 26;
+	if (guardaFrame) {
+		/*captura.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
+		captura.save("frames/" + ofToString(ofGetFrameNum()) + ".png");*/
+		ofSaveScreen("frames/"+ ofToString(ofGetFrameNum()) + ".tif");
+		//ofSaveImage("frames/" + ofToString(ofGetFrameNum()) + ".tif");
+	}
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
 	if (!iniciaTodo) {
-		ofDrawBitmapString("OPRIME s PARA INICIAR", ofGetWidth() / 2, ofGetHeight() / 2);
+		ofDrawBitmapString("OPRIME i PARA INICIAR", ofGetWidth() / 2, ofGetHeight() / 2);
 		ofDrawBitmapString("Oprime mouse para cambiar escenas", ofGetWidth() / 2, 50+ofGetHeight() / 2);
 
 	}
@@ -966,6 +965,7 @@ void ofApp::draw() {
 		ofSetBackgroundAuto(!estado);
 		estado = false;
 	}
+
 }
 
 void ofApp::evaluar() {

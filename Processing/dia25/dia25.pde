@@ -13,7 +13,7 @@ int val1, val2, diam, cambio;
 float px, py, px2, py2, long1, long2;
 
 void setup() {
-  size(1280, 720);
+  size(1920, 1080);
   background(0);
 
   oscp5 = new OscP5(this, 4445);
@@ -67,6 +67,11 @@ void draw() {
     oscp5.send(mensajeSC, direcSC);
   }
   println(cambio);
+  if (mousePressed) {
+    saveFrame("GA_25.png");
+    delay(500);
+    exit();
+  }
 }
 
 //Código de SuperCollider

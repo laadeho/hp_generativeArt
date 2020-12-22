@@ -9,7 +9,7 @@ float px=0, py=0, opa=0;
 int nada;
 
 void setup() {
-  size(1600, 800);
+  size(1920, 1080);
   background(255);
   smooth();
 
@@ -32,4 +32,9 @@ void draw() {
   fill(255, opa);
   text("VERDAD?", width-width/8, height-height/8);
   opa+=0.1;
+  if (mousePressed) {
+    saveFrame("GA_20.png");
+    delay(500);
+    exit();
+  }
 }

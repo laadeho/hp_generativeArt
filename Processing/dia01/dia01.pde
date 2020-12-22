@@ -13,7 +13,7 @@ float bly[ ];
 int n = 50;
 
 void setup() {
-  size(800, 600, P3D);
+  size(1920, 1080, P3D);
   background(0);
   smooth();
 
@@ -47,5 +47,10 @@ void draw() {
     rota[i]+= 0.001;
     pos1[i]+=vel[i];
     pos2[i]+=vel[i];
+  }
+  if (mousePressed) {
+    saveFrame("GA_01.png");
+    delay(500);
+    exit();
   }
 }

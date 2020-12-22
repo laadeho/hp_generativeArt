@@ -12,7 +12,7 @@ float pix, piy, pfx, pfy;
 int q=100, s, opac=255, comienza=0;
 
 void setup() {
-  size(1600, 800);
+  size(1920, 1080);
   background(0);
 
   pix=random(width);
@@ -66,6 +66,11 @@ void draw() {
     }
     s=s+second();
     println(second());
+  }
+  if (mousePressed) {
+    saveFrame("GA_16.png");
+    delay(500);
+    exit();
   }
 }
 void evaluar() {

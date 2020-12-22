@@ -8,7 +8,7 @@ int part = 1000;
 boolean env01=true;
 
 void setup() {
-  size(800, 400);
+  size(1920, 1080);
   background(0);
   px1 = new float[part];
   py1 = new float[part];
@@ -44,5 +44,10 @@ void draw() {
       px1[i]+=velx[i]*2;
       py1[i]+=vely[i]*2;
     }
+  }
+  if (mousePressed) {
+    saveFrame("GA_23.png");
+    delay(500);
+    exit();
   }
 }

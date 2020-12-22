@@ -15,7 +15,7 @@ char abc[]= {
 String letras = new String(abc);
 
 void setup() {
-  size(1600, 800);
+  size(1920, 1080);
   background(0);
   smooth();
 
@@ -58,5 +58,10 @@ void draw() {
   }
   if (s4==renglon) {
     brake=60;
+  }
+  if (mousePressed) {
+    saveFrame("GA_21.png");
+    delay(500);
+    exit();
   }
 }

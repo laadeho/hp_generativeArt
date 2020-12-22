@@ -2,13 +2,13 @@
  Por Eduardo H Obieta
  http://artegenerativo.laad.com.mx 
  */
- 
- float rotacActual=0;
+
+float rotacActual=0;
 float perlinPos=0;
 float perlinVel=0.1;
 
 void setup() {
-  size(800, 450, P3D);
+  size(1920, 1080, P3D);
   frameRate(10);
   background(0);
 }
@@ -52,4 +52,9 @@ void draw() {
 
   perlinPos +=perlinVel;
   rotacActual +=0.025;
+  if (mousePressed) {
+    saveFrame("GA_02.png");
+    delay(500);
+    exit();
+  }
 }

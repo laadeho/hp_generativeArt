@@ -11,7 +11,7 @@ PGraphics rec;
 
 //setuo
 void setup() {
-  size(1600, 800, P3D);
+  size(1920, 1080, P3D);
   rec = createGraphics(400, 400, P3D);
   cam = new PeasyCam(this, 200);
   cam.setMinimumDistance(200);
@@ -57,4 +57,9 @@ void draw() {
   rotateX(-PI/2);
   image(rec, 0, 0);
   popMatrix();
+  if (mousePressed) {
+    saveFrame("GA_26.png");
+    delay(500);
+    exit();
+  }
 }

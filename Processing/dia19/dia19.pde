@@ -10,7 +10,7 @@ int part = 500 ;
 int s = second();
 
 void setup() {
-  size(1600, 800, P3D);
+  size(1920, 1080, P3D);
   background(230);
   px = new float[part];
   py = new float[part];
@@ -56,4 +56,10 @@ void draw() {
   popMatrix();
   ang+=0.001;
   vcol+=0.01;
+
+  if (mousePressed) {
+    saveFrame("GA_19.png");
+    delay(500);
+    exit();
+  }
 }

@@ -8,7 +8,7 @@ float pro[], var[], cx, cy, radio=1, radio2=1, radio3=1, piy;
 float ang=TWO_PI/(float)part;
 
 void setup() {
-  size(800, 400, P3D); 
+  size(1920, 1080, P3D); 
   background(0); 
   smooth();
 }
@@ -42,5 +42,10 @@ void draw() {
   strokeWeight(3);
   for (int i=0; i<part/100; i++) {
     point(radio3*sin(ang*i), radio3*cos(ang*i), sin(i));
+  }
+  if (mousePressed) {
+    saveFrame("GA_15.png");
+    delay(500);
+    exit();
   }
 }

@@ -6,10 +6,10 @@
 float px1, px2, pix, pfx, piy, pfy, piz, pfz, py1, py2, lim2, inc=10;
 
 void setup() {
-  size(800, 400, P3D);
+  size(1920, 1080, P3D);
   background(0);
   smooth();
-  int lim=width/2, lim2=height/3;
+  int lim=width/2;
   pix=random(-lim, lim); 
   pfx=random(-lim, lim); 
   piy=random(-lim, lim); 
@@ -45,4 +45,9 @@ void draw() {
   }
   px1+=inc;
   px2+=inc;
+  if (mousePressed) {
+    saveFrame("GA_14.png");
+    delay(500);
+    exit();
+  }
 }
